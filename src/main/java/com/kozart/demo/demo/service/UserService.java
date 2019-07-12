@@ -24,5 +24,8 @@ public class UserService {
         System.out.println(userName+" "+passWord);
         return userMapper.loginInfo(userName,passWord);
     }
+    public User insertUser(String userName,String passWord,String realName,Integer isAdmain){
+        return  userMapper.insertUser(userName,passWord,realName,isAdmain);
+    }
 
 }

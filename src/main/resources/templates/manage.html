@@ -7,8 +7,9 @@
 </head>
 <body>
 <p th:text="'Hello, ' + ${title}" /><br/>
+<form accept-charset="utf-8" action="/demo/insertUser">
 <ul>
-
+    <li><label>插入数据</label></li>
     <li><label>请输入用户名：</label></li>
     <li><input type="text" id="userName" name="userName" maxlength="20"/><li>
     <li><label>设置密码：</label></li>
@@ -16,18 +17,20 @@
     <li><label>设置昵称：</label></li>
     <li><input type="text" id="realName" name="realName" maxlength="20"/></li>
     <li></li>
-    <li><button type="submit" text="login" style="height:30px;width:50px"/></li>
+    <li><button text="login"  style="height:30px;width:50px"/></li>
 </ul>
-<!--<ul>-->
-<!--    <li><label>请输入用户名：</label></li>-->
-<!--    <li><input type="text" id="userName" name="userName" maxlength="20"/><li>-->
-<!--    <li><label>设置密码：</label></li>-->
-<!--    <li><input type="password" id="passWord" name="passWord" maxlength="20"/></li>-->
-<!--    <li><label>设置昵称：</label></li>-->
-<!--    <li><input type="text" id="realName" name="realName" maxlength="20"/></li>-->
-<!--    <li></li>-->
-<!--    <li><button type="submit" text="login" style="height:30px;width:50px"/></li>-->
-<!--</ul>-->
+</form>
+<form accept-charset="utf-8" action="/demo/queryUser">
+<ul>
+    <li><label>查询数据（根据条件查询）</label></li>
+    <li><label>请输入用户名：</label></li>
+    <li><input type="text" id="userQueryName" name="userName" maxlength="20"/><li>
+    <li><label>输入昵称：</label></li>
+    <li><input type="text" id="realQueryName" name="realName" maxlength="20"/></li>
+    <li></li>
+    <li><button type="submit" text="login" onclick="/demo/query" style="height:30px;width:50px"/></li>
+</ul>
+</form>
 <!--<ul>-->
 <!--    <li><label>请输入用户名：</label></li>-->
 <!--    <li><input type="text" id="userName" name="userName" maxlength="20"/><li>-->

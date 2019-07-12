@@ -19,6 +19,7 @@ public interface UserMapper {
    public User Sel(int id);
 //   public User loginInfo(@Param("userName") String userName , @Param("passWord") String passWord);
    public User loginInfo(String userName ,String passWord);
+   public User insertUser(String userName,String passWord,String realName,Integer isAdmain);
 }
 
 

@@ -70,6 +70,24 @@ public class UserController {
         }
 
     }
+    @RequestMapping("/insertInfo")
+    public String insertInfo(User user) {
+        User user1 = userService.loginInfo(user.getUserName(), user.getPassWord());
+        System.out.println(user1);
+        if (user1 == null) {
+            map.put("msg", "username or password are wrong!");
+            return "error";
+        } else if(user1.getIsAdmain()==1){
+            map.put("msg", "admin login success!");
+            model.addAttribute("title",user.getUserName()+" login success!");
+            return "/manage";
+        }
+        else{
+            map.put("msg", user.getUserName()+"login success!");
+            return "success";
+        }
+
+    }
 //普通获取参数
 //    @RequestMapping("/getLogin")
 //    @ResponseBody

@@ -16,5 +16,7 @@
     <select id="loginInfo" resultType="com.kozart.demo.demo.bean.User" parameterType="com.kozart.demo.demo.bean.User">
         select * from user where userName=#{userName} and passWord=#{passWord}
     </select>
-
+    <insert id="insertUser" parameterType="com.kozart.demo.demo.bean.User">
+        insert into user (userName,passWord,realName,isAdmain) values (#{userName},#{passWord},#{realName},#{isAdmain})
+    </insert>
 </mapper>
